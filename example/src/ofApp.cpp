@@ -1,7 +1,7 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void ofApp::setup(){
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
 	camera.setDistance(400);
@@ -17,7 +17,7 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update(){
 	myFbo.begin();
 	ofClear(0, 0, 0,255);
 	if (!bDrawLenna){
@@ -47,7 +47,7 @@ void testApp::update(){
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
 	
 	/* draw normal view */
 	ofSetColor(255);
@@ -77,7 +77,7 @@ void testApp::draw(){
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 	if (key == '1') myGlitch.setFx(OFXPOSTGLITCH_CONVERGENCE	, true);
 	if (key == '2') myGlitch.setFx(OFXPOSTGLITCH_GLOW			, true);
 	if (key == '3') myGlitch.setFx(OFXPOSTGLITCH_SHAKER			, true);
@@ -102,7 +102,7 @@ void testApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void ofApp::keyReleased(int key){
 	if (key == '1') myGlitch.setFx(OFXPOSTGLITCH_CONVERGENCE	, false);
 	if (key == '2') myGlitch.setFx(OFXPOSTGLITCH_GLOW			, false);
 	if (key == '3') myGlitch.setFx(OFXPOSTGLITCH_SHAKER			, false);
@@ -124,36 +124,36 @@ void testApp::keyReleased(int key){
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
+void ofApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
