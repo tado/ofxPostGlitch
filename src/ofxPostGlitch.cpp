@@ -10,6 +10,9 @@ void ofxPostGlitch::setup(ofFbo *buffer_){
 	targetBuffer = buffer_;
 	buffer_size.set(buffer_->getWidth(), buffer_->getHeight());
 	ShadingBuffer.allocate(buffer_size.x,buffer_size.y);
+    for (int i = 0; i < GLITCH_NUM; i++) {
+        bShading[i] = false;
+    }
 }
 
 void ofxPostGlitch::setFbo(ofFbo *buffer_){
